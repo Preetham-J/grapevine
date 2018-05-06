@@ -1,0 +1,48 @@
+/*==============================================
+    Style Sheet - Used on all EJS templates
+================================================*/
+
+html,
+body {
+    height: 100%;
+    font-family: 'Roboto', 'Open Sans', serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Image and Text Styling */
+.img-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-content {
+    padding: 5rem 0;
+}
+
+/* Cover (used on all pages) */
+#cover {
+    background: #222 url('img/grapevine.jpeg') center center no-repeat;*/
+    background-size: cover;
+    height: 80%;
+}
+
+.cover-text {
+    background: rgba(0,0,0,0.8);
+    border-radius: 25px;
+    color: white;
+    padding: 1.875rem;
+    line-height: 2.0;
+}
+
+/* Footer (used on all pages) */
+#footer-main {
+    background: #222;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 2.5rem 0;
+}

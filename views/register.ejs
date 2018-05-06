@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<!--==============================================
+            	Registration Page
+================================================-->
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Register Page Title -->
+		<title>Register</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+		<!-- Custom Font and CSS -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="/app.css"/>
+
+		<!-- Favicons -->
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+		<link rel="shortcut icon" href="/icons/favicon.png">
+
+		<!-- Validate Form (Username, Email, Password) -->
+		<script>
+			function validateForm() {
+			    var username = document.forms["registration"]["username"].value;
+			    if (username == "") {
+			        alert("Username must be filled out!");
+			        return false;
+			    }
+			    var email = document.forms["registration"]["email"].value;
+			    if (email == "") {
+			        alert("Email must be filled out!");
+			        return false;
+			    }
+			    var password = document.forms["registration"]["password"].value;
+			    if (password == "") {
+			        alert("Password must be filled out!");
+			        return false;
+			    }
+			}
+		</script>
+	</head>
+
+	<body>
+		<!-- Main Page -->
+		<section id="cover">
+			<div class="section-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 offset-md-3 cover-text">
+							<h1>Registration Page!</h1>
+							<!-- Registration Form (Username, Email Address, Password) (POST) -->
+							<form method="POST" action="/account/register" name="registration" onsubmit="return validateForm()">
+								<div class="form-group">
+									<label for="exampleInputUsername1">Username</label>
+									<input type="username" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="usernameHelp" placeholder="Username">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Email address</label>
+									<input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="user@example.com">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Password</label>
+									<input type="password" name="password" class="form-control mb-5" id="exampleInputPassword1" placeholder="Password">
+								</div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Main Footer -->
+		<footer id="footer-main">
+			<div class="container">
+				<div class="row d-flex justify-content-center"">
+					<div class="col-sm-3">
+						<p>Coded by Preetham Jayaram</p>
+					</div>
+					<!-- Social Links -->
+					<div class="col-sm-3">
+						<ul class="list-unstyled">
+							<p>Connect with me!</p>
+							<li><a href="https://github.com/Preetham-J">GitHub</a></li>
+							<li><a href="https://www.linkedin.com/in/preetham-jayaram/">LinkedIn</a></li>
+						</ul>
+					</div>
+					<!-- Spotify Mention -->
+					<div class="col-sm-3">
+						<h6>This web application uses the Spotify Web API.</h6>
+						<img class="img-responsive" src="/img/spotify_logo.png" alt="Spotify Logo">
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	
+</html>
