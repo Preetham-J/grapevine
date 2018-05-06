@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!--==============================================
+            	Suggestion Page
+================================================-->
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Suggestion Page Title -->
+		<title>Time to Listen!</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+		<!-- Custom Font and CSS -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="/app.css"/>
+
+		<!-- Favicons -->
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+		<link rel="shortcut icon" href="/icons/favicon.png">
+
+        <!-- Validate Form (Artist) -->
+        <script>
+            function validateForm() {
+                var artist = document.forms["preferenceForm"]["artist"].value;
+                if (artist == "") {
+                    alert("Artist must be filled out!");
+                    return false;
+                }
+            }
+        </script>
+	</head>
+
+	<body>
+		<!-- Main Page -->
+		<section id="cover">
+			<div class="section-content">
+				<div class="container">
+					<div class="row cover-text">
+						<!-- Suggestion Info (Playlist Name, Author) + Link to Spotify Playlist -->
+						<div class="col-md-4">
+							<h1 class="mb-4">Here's our suggestion:</h1>
+							<h3>Playlist Name:</h3>
+							<p><%= playlist_info.playlist_name %></p>
+							<h3>Playlist Author:</h3>
+							<p><%= playlist_info.playlist_owner %></p>
+							<a class="btn btn-success" href="<%= playlist_info.playlist_url %>" role="button">Enjoy!</a>
+						</div>
+						<!-- Suggested Playlist Image -->
+						<div class="col-md-4 img-content">
+							<img class="img-responsive" src="<%= playlist_info.playlist_image_url %>" alt="Playlist Cover">
+						</div>
+						<!-- Add to Preferences -->
+						<div class="col-md-4">
+							<h1 class="mb-4">Did you like the suggestion?</h1>
+							<p>Enter your favourite artist from the playlist to add them to your preferences!</p>
+							<p><strong>Make sure the artist name you enter is the correct stage name for that particular artist!</strong></p>
+							<!-- Form to Add to Preferences (POST) -->
+							<form method="POST" action="/addPreference" name="preferenceForm" onsubmit="return validateForm()">
+								<input type="hidden" name="user_id" value="<%= user_id_given %>">
+                                <div class="form-group">
+                                    <label for="artist">Artist</label>
+                                    <input type="artist" name="artist" class="form-control" id="exampleInputEmail1" aria-describedby="artist" placeholder="Who did you like best?">
+                                </div>
+                                <button type="submit" class="btn btn-success mb-5">Submit</button>
+                            </form>
+                            <!-- Return to Listen Page -->
+                            <a class="btn btn-dark" href="javascript:history.back()" role="button">Back to listening choices!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Main Footer -->
+		<footer id="footer-main">
+			<div class="container">
+				<div class="row d-flex justify-content-center"">
+					<div class="col-sm-3">
+						<p>Coded by Preetham Jayaram</p>
+					</div>
+					<!-- Social Links -->
+					<div class="col-sm-3">
+						<ul class="list-unstyled">
+							<p>Connect with me!</p>
+							<li><a href="https://github.com/Preetham-J">GitHub</a></li>
+							<li><a href="https://www.linkedin.com/in/preetham-jayaram/">LinkedIn</a></li>
+						</ul>
+					</div>
+					<!-- Spotify Mention -->
+					<div class="col-sm-3">
+						<h6>This web application uses the Spotify Web API.</h6>
+						<img class="img-responsive" src="/img/spotify_logo.png" alt="Spotify Logo">
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	
+</html>
