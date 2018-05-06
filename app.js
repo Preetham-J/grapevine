@@ -62,11 +62,11 @@ app.use('/account', router);
 ================================================*/
 // Connect to MySQL database
 var connection = mysql.createConnection({
-    host: "my-database.cmjx3lmttbns.us-east-2.rds.amazonaws.com",
-    user: "Preetham",
-    password: "Pj1234asdf4rf1qa",
-    database: "grapevine",
-    ssl: "Amazon RDS"
+    host: "********",
+    user: "********",
+    password: "*************",
+    database: "*************",
+    ssl: "*************"
 });
 //Test connection to database, report if connected
 connection.connect(function(err) {
@@ -83,9 +83,9 @@ connection.connect(function(err) {
 ================================================*/
 // Pass credentials for Spotify API into SpotifyWebApi wrapper
 var spotifyApi = new SpotifyWebApi({
-    clientId: 'b1f250bf32a2428cb6f6617ad2d52cbb',
-    clientSecret: '63f2c3c66b92430888152e05aaf30aa4',
-    redirectUri: 'http://localhost:8080/callback/'
+    clientId: '***************',
+    clientSecret: '****************',
+    redirectUri: '*********************'
 });
 
 

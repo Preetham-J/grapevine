@@ -3,11 +3,11 @@ var mysql = require('mysql');
 
 // Connect to MySQL database
 var connection = mysql.createConnection({
-    host: "my-database.cmjx3lmttbns.us-east-2.rds.amazonaws.com",
-    user: "Preetham",
-    password: "Pj1234asdf4rf1qa",
-    database: "grapevine",
-    ssl: "Amazon RDS"
+    host: "********",
+    user: "********",
+    password: "*************",
+    database: "*************",
+    ssl: "*************"
 });
 
 // Check connection to database
