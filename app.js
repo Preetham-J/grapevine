@@ -490,7 +490,7 @@ app.post('/addPreference', function(req, res){
 
 /*===============================================================================*/
 // Report server as running and address
-app.listen(8080, function(){
+app.listen(process.env.PORT || 8080, function(){
     console.log('Server running on 8080!');
 });
 
