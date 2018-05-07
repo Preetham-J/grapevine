@@ -42,7 +42,7 @@
 		<section id="cover">
 			<div class="section-content">
 				<div class="container">
-					<div class="row cover-text">
+					<div class="row justify-content-center cover-text">
 						<!-- Suggestion Info (Playlist Name, Author) + Link to Spotify Playlist -->
 						<div class="col-md-4">
 							<h1 class="mb-4">Here's our suggestion:</h1>
@@ -54,7 +54,7 @@
 						</div>
 						<!-- Suggested Playlist Image -->
 						<div class="col-md-4 img-content">
-							<img class="img-responsive" src="<%= playlist_info.playlist_image_url %>" alt="Playlist Cover">
+							<img class="img-responsive playlist-image" src="<%= playlist_info.playlist_image_url %>" alt="Playlist Cover">
 						</div>
 						<!-- Add to Preferences -->
 						<div class="col-md-4">
@@ -80,8 +80,8 @@
 
 		<!-- Main Footer -->
 		<footer id="footer-main">
-			<div class="container">
-				<div class="row d-flex justify-content-center"">
+			<div class="container-fluid">
+				<div class="row-fluid d-flex justify-content-center"">
 					<div class="col-sm-3">
 						<p>Coded by Preetham Jayaram</p>
 					</div>
@@ -95,8 +95,8 @@
 					</div>
 					<!-- Spotify Mention -->
 					<div class="col-sm-3">
-						<h6>This web application uses the Spotify Web API.</h6>
-						<img class="img-responsive" src="/img/spotify_logo.png" alt="Spotify Logo">
+						<p>This web application uses the Spotify Web API.</p>
+						<img class="img-responsive icon" src="/img/spotify_logo.png" alt="Spotify Logo">
 					</div>
 				</div>
 			</div>
