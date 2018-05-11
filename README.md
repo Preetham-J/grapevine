@@ -15,7 +15,7 @@ Suggestion:
 ![alt text](/screenshots/suggestion.JPG?raw=true "Suggestion")
 
 ## Development Tools
-To create this application, I used Node.js + Express, along with the following modules: body-parser, ejs, mysql, npm, querystring, request, spotify-web-api-node. For the frontend, HTML and CSS with EJS templates were used. For databasing, a MySQL database running on Amazon RDS was utilized, and the application was hosted using Heroku.
+To create this application, I used Node.js + Express, along with the following modules: body-parser, ejs, mysql, npm, querystring, request, spotify-web-api-node. For the frontend, HTML, CSS, Bootstrap, and EJS were used. For databasing, a MySQL database running on Amazon RDS was utilized, and the application was hosted using Heroku.
 
 ## What I Learned
 Overall, I was able to learn a lot about various backend web development topics, such has API integration, authentication, cloud databasing and hosting, as well as developing in Node.js.
